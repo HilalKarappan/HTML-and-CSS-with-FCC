@@ -1,0 +1,183 @@
+/* comment */
+/* body {
+background-color:yellow;
+opacity: 0.9;
+background-image: url("https://www.freecodecamp.org/news/content/images/2021/05/freecodecamp-org-gravatar.jpeg");
+background-position: right top;
+} */
+
+.heading {
+    color: blue;
+}
+/* everything in this class will be selected */
+
+h1.heading {
+    background-color: aquamarine;
+}
+/* everything in class, but also in h1 will be selected */
+
+* {
+    color: green;
+}
+/* this is a universal selector. selects everything  */
+
+h1, p {
+    color: brown;
+    margin-left: 50px;
+}
+/* commas can be used to select mulitple elements that are not in any class or id 
+50px 50px 50px 50px=top right bottom left is the order
+50px 40px 30px == top right & left bottom
+50px 30px  ==  top-bottom is 50px and left-right is 30px
+50px == all sides
+*/
+
+b {
+    background-color: bisque;
+}
+
+#PeeOne {
+    background-color: inherit;
+    border-style: dotted double dashed groove;
+    border-width: 6px 6px 6px 12px;
+    border-color: aqua aqua aqua rgb(8, 98, 98);
+}
+/* inherit takes the styles in which it is nested. in this case, b 
+if you need different borders on different sides, the same rule as margin applies->  top, right, bottom, left
+*/
+
+#PeeTwo {
+    border-left: dotted blue 5px ;
+    padding: 10px 20px 30px 40px ;
+}
+/* As seen here, you can also pick a side and style it
+Padding follows the same rule of order as margin
+Margin is the space outside the border and padding is after
+So, from outside to inside it goes, margin-outline-border-padding-content */ 
+
+#PeeThree {
+    background-color: beige;
+    height: 90px;
+    outline: solid;
+    outline-offset: 10px;
+    border: solid 10px;
+    margin: 30px;
+    padding: 10px;
+}
+/* height changes the size of the whole element */
+
+/* Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline */
+
+#PeeFour {
+    width: 80%;
+    color: blue;
+    background-color: yellow;
+    text-align: justify;
+
+}
+/* Justify stretches the element's content in order to display the equal width of every line */
+
+#PeeFive {
+    text-decoration-line: line-through ;
+    text-decoration-color: red ;
+}
+/* This can be use to dictate how a hyperlink looks */
+
+#PeeSix {
+    text-transform: capitalize;
+    text-indent: 30px;
+    letter-spacing: 5px;
+}
+/* this can be used to transform to all lowercase and all uppercase as well */
+
+#fonts {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+table, th, td {
+    border: 2px solid;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th, td {
+    height:30px;
+    text-align: center;
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: aqua;
+} /* by using tr, the whole row will have the designated hover effect */
+
+/* "display: none" will remove it from the page
+"visibility: hidden" will leave the content on the page, but will not be visible. this means the next content will come after this. */
+
+h1 b { /*decscentant selector */
+    color: red;
+}
+
+h1 > b {
+    color: gray;
+}
+/* child selector affects only the direct  child. the one inside p is not direct, but still descentant, hence it is red, not gray */
+
+h1 + b {
+    color: green;
+}
+/* The adjacent sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element. */
+
+h1 ~ b {
+    color: blueviolet;
+}
+/* The general sibling combinator (~) separates two selectors and matches all iterations of the second element, that are following the first element (though not necessarily immediately), and are children of the same parent element. */
+
+.DrownButton {
+    background-color: aquamarine;
+    color: blueviolet;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer; /* this makes the pointer a finger when hovering on the button  */
+}
+
+dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none ;
+    position: absolute;
+    background-color: lightblue;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 11px 15px;
+    text-decoration: none;
+    display: block; /* The element generates a block element box, generating line breaks both before and after the element when in the normal flow. */
+}
+/* More about display on (https://developer.mozilla.org/en-US/docs/Web/CSS/display) */
+
+.dropdown-menu a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown:hover .DrownButton {
+    background-color: gray;
+}
+
+div[class] { /*selects elements with a certain attribute. In this case, class */
+    color: red;
+}
+/* Above is an example for attribute selector */
+
+Stopped at 3:15
